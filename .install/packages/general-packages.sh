@@ -53,6 +53,12 @@ packagesPacman=(
     "guvcview"
     "jq"
     "rofi-wayland"
+    "fcitx5"
+    "fcitx5-qt"
+    "fcitx5-gtk"
+    "fcitx5-unikey"
+    "kcm-fcitx5"
+    "code"
 );
 
 packagesParu=(

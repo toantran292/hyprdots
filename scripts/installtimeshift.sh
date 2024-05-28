@@ -10,9 +10,9 @@ sleep 1
 clear
 figlet "Timeshift"
 
-_isInstalledYay() {
+_isInstalledParu() {
     package="$1";
-    check="$(yay -Qs --color always "${package}" | grep "local" | grep "${package} ")";
+    check="$(paru -Qs --color always "${package}" | grep "local" | grep "${package} ")";
     if [ -n "${check}" ] ; then
         echo 0; #'0' means 'true' in Bash
         return; #true
@@ -21,14 +21,14 @@ _isInstalledYay() {
     return; #false
 }
 
-timeshift_installed=$(_isInstalledYay "timeshift")
-grubbtrfs_installed=$(_isInstalledYay "grub-btrfs")
+timeshift_installed=$(_isInstalledParu "timeshift")
+grubbtrfs_installed=$(_isInstalledParu "grub-btrfs")
 
 if [[ $timeshift_installed == "0" ]] ;then
     echo ":: Timeshift is already installed"
 else
     if gum confirm "DO YOU WANT TO INSTALL Timeshift now?" ;then
-        yay -S timeshift
+        paru -S timeshift
     fi
 fi
 if [[ -d /boot/grub ]] && [[ $grubbtrfs_installed == "0" ]] ;then
@@ -36,7 +36,7 @@ if [[ -d /boot/grub ]] && [[ $grubbtrfs_installed == "0" ]] ;then
 else
     echo ":: grub-btrfs is required to select a snapshot on grub bootloader."
     if gum confirm "DO YOU WANT TO INSTALL grub-btrfs now?" ;then
-        yay -S grub-btrfs
+        paru -S grub-btrfs
     fi
 fi
 sleep 3

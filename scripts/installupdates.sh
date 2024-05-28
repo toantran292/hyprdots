@@ -7,16 +7,16 @@
 #                                    |_|                              
 # by Stephan Raabe (2024) 
 # ----------------------------------------------------- 
-# Required: yay trizen timeshift btrfs-grub
+# Required: paru trizen timeshift btrfs-grub
 # ----------------------------------------------------- 
 
 sleep 1
 clear
 figlet "Updates"
 
-_isInstalledYay() {
+_isInstalledParu() {
     package="$1";
-    check="$(yay -Qs --color always "${package}" | grep "local" | grep "${package} ")";
+    check="$(paru -Qs --color always "${package}" | grep "local" | grep "${package} ")";
     if [ -n "${check}" ] ; then
         echo 0; #'0' means 'true' in Bash
         return; #true
@@ -40,7 +40,7 @@ else
     exit;
 fi
 
-if [[ $(_isInstalledYay "timeshift") == "0" ]] ;then
+if [[ $(_isInstalledParu "timeshift") == "0" ]] ;then
     if gum confirm "DO YOU WANT TO CREATE A SNAPSHOT?" ;then
         echo
         c=$(gum input --placeholder "Enter a comment for the snapshot...")
@@ -58,7 +58,7 @@ if [[ $(_isInstalledYay "timeshift") == "0" ]] ;then
     echo
 fi
 
-yay
+paru
 
 notify-send "Update complete"
 echo 
