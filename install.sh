@@ -59,5 +59,6 @@ echo ""
 # source .install/hyprland-dotfiles.sh
 # source .install/settings.sh
 # source .install/apps.sh
+# source .install/gtk.sh
 
 # sleep 3
