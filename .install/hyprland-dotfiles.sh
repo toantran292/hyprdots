@@ -5,6 +5,9 @@
 if [ -d ~/dotfiles-versions/$version/alacritty ]; then
     _installSymLink alacritty ~/.config/alacritty ~/dotfiles/alacritty/ ~/.config
 fi
+if [ -d ~/dotfiles-versions/$version/fcitx5 ]; then
+    _installSymLink fcitx5 ~/.config/fcitx5 ~/dotfiles/fcitx5/ ~/.config
+fi
 if [ -d ~/dotfiles-versions/$version/vim ]; then
     _installSymLink vim ~/.config/vim ~/dotfiles/vim/ ~/.config
 fi
