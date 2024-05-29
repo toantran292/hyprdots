@@ -39,9 +39,9 @@ case $1 in
     "init")
         sleep 1
         if [ -f $cache_file ]; then
-            wal -q -i $current_wallpaper
+            wal -s -q -i $current_wallpaper
         else
-            wal -q -i ~/wallpaper/
+            wal -s -q -i ~/wallpaper/
         fi
     ;;
 
@@ -56,12 +56,12 @@ case $1 in
             echo "No wallpaper selected"
             exit
         fi
-        wal -q -i ~/wallpaper/$selected
+        wal -s -q -i ~/wallpaper/$selected
     ;;
 
     # Randomly select wallpaper 
     *)
-        wal -q -i ~/wallpaper/
+        wal -s -q -i ~/wallpaper/
     ;;
 
 esac
