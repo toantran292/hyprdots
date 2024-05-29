@@ -44,6 +44,10 @@ source .install/remove.sh
 source .install/general.sh
 source .install/packages/general-packages.sh
 source .install/install-packages.sh
+
+chsh -s $(which zsh)
+
+source .install/oh-my-zsh.sh
 source .install/profile.sh
 if [[ $profile == *"Hyprland"* ]]; then
     echo -e "${GREEN}"
@@ -78,7 +82,8 @@ fi
 source .install/settings.sh
 source .install/apps.sh
 source .install/gtk.sh
-source .install/bashrc.sh
+source .install/zshrc.sh
+source .install/p10k.sh
 source .install/cleanup.sh
 source .install/diagnosis.sh
 source .install/reboot.sh

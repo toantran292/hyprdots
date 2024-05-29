@@ -9,7 +9,6 @@ packagesPacman=(
     "alacritty" 
     "firefox" 
     "dunst" 
-    "starship"
     "mpv" 
     "thunar" 
     "mousepad"
@@ -59,6 +58,7 @@ packagesPacman=(
     "fcitx5-unikey"
     "kcm-fcitx5"
     "code"
+    "zsh"
 );
 
 packagesParu=(
