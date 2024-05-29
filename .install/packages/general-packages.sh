@@ -59,10 +59,10 @@ packagesPacman=(
     "kcm-fcitx5"
     "code"
     "zsh"
+    "neofetch"
 );
 
 packagesParu=(
-    "pfetch" 
     "bibata-cursor-theme" 
     "trizen"
     "pacseek"
