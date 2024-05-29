@@ -11,7 +11,7 @@ packagesPacman=(
     "hypridle"
 );
 
-packagesYay=(
+packagesParu=(
     "swww" 
     "wlogout"
     "nwg-look"
