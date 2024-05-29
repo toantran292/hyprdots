@@ -12,6 +12,7 @@ packagesPacman=(
 );
 
 packagesParu=(
+    "alacritty-themes"
     "swww" 
     "wlogout"
     "nwg-look"

@@ -78,10 +78,10 @@ fi
 source .install/settings.sh
 source .install/apps.sh
 source .install/gtk.sh
-source .install/zshrc.sh
-source .install/p10k.sh
 source .install/cleanup.sh
 source .install/diagnosis.sh
 source .install/oh-my-zsh.sh
+source .install/zshrc.sh
+source .install/p10k.sh
 source .install/reboot.sh
 sleep 3
