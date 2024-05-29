@@ -1,3 +1,10 @@
+# ------------------------------------------------------
+# Install Oh My ZSH
+# ------------------------------------------------------
+echo -e "${GREEN}"
+figlet "Oh My ZSH"
+echo -e "${NONE}"
+
 if ! type zsh > /dev/null 2>&1; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
