@@ -13,7 +13,6 @@
     "layer": "top",
     "margin-top": 14,
     "margin-bottom": 0,
-    "layer": "top",
     "margin-left": 0,
     "margin-right": 0,    
     "spacing": 0,
@@ -24,11 +23,12 @@
     // Modules Left
     "modules-left": [
         "custom/appmenu",
-        "group/links",
+        // "group/links",
         "group/settings",
-        //"wlr/taskbar",
+        // "wlr/taskbar",
         "group/quicklinks",
         "hyprland/window",
+        // "user",
         "custom/empty"
     ],
 
@@ -44,7 +44,7 @@
         "bluetooth",
         "battery", 
         "network",
-        "group/hardware",
+        // "group/hardware",
         "custom/cliphist",
         "idle_inhibitor",
         "tray",
