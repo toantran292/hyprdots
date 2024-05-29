@@ -5,10 +5,10 @@ echo -e "${GREEN}"
 figlet "Oh My ZSH"
 echo -e "${NONE}"
 
-if ! type zsh > /dev/null 2>&1; then
+if [ ! -f $HOME/.oh-my-zsh/oh-my-zsh.sh ] then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-    echo ":: OK: zsh found."
+    echo ":: OK: oh-my-zsh found."
 fi
 
 if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
