@@ -5,7 +5,7 @@ echo -e "${GREEN}"
 figlet "Oh My ZSH"
 echo -e "${NONE}"
 
-if [ ! -f $HOME/.oh-my-zsh/oh-my-zsh.sh ] then
+if [ ! -f $HOME/.oh-my-zsh/oh-my-zsh.sh ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
     echo ":: OK: oh-my-zsh found."
