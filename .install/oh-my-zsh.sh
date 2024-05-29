@@ -6,6 +6,7 @@ figlet "Oh My ZSH"
 echo -e "${NONE}"
 
 if [ ! -f $HOME/.oh-my-zsh/oh-my-zsh.sh ]; then
+    rm -rf $HOME/.oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
     echo ":: OK: oh-my-zsh found."
