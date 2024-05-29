@@ -7,7 +7,7 @@ echo -e "${NONE}"
 
 if [ ! -f $HOME/.oh-my-zsh/oh-my-zsh.sh ]; then
     rm -rf $HOME/.oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --skip-chsh
 else
     echo ":: OK: oh-my-zsh found."
 fi
