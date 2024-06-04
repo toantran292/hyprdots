@@ -60,7 +60,7 @@ class ML4WRestore:
         if "waybar_workspaces" in self.settings:
             value = int(self.settings["waybar_workspaces"])
             text = '            "*": ' + str(value)
-            self.replaceInFileNext("waybar/modules.json", "// START WORKSPACES", text)
+            self.replaceInFileNext("waybar/modules.jsonc", "// START WORKSPACES", text)
             print (":: waybar_workspaces restored")
 
         # Rofi BorderSize
@@ -88,16 +88,16 @@ class ML4WRestore:
 
         if custom_format != "":
             timedate = '        "format": "{:' + custom_format + '}",'
-            self.replaceInFileNext("waybar/modules.json", "TIMEDATEFORMAT", timedate)
+            self.replaceInFileNext("waybar/modules.jsonc", "TIMEDATEFORMAT", timedate)
         else:
             timedate = '        "format": "{:' + timeformat + ' - ' + dateformat + '}",'
-            self.replaceInFileNext("waybar/modules.json", "TIMEDATEFORMAT", timedate)
+            self.replaceInFileNext("waybar/modules.jsonc", "TIMEDATEFORMAT", timedate)
         print (":: timedate format restored")
 
     def loadSwitch(self,k,m):
         if k in self.settings:
             if not self.settings[k]:
-                self.replaceInFile("waybar/modules.json",'"' + m + '"','            //"' + m + '",')
+                self.replaceInFile("waybar/modules.jsonc",'"' + m + '"','            //"' + m + '",')
                 print (":: " + k + " restored")
 
     def loadSwitchAll(self,k,m):
